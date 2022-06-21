@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 WORKDIR /app
 # Install prerequisites
-RUN apt-get update && apt-get install -y curl
+RUN apt-get update && apt-get install -y screen
 RUN apt-get update && apt-get install -y wget
 RUN apt-get update && apt-get install -y tar
 RUN wget -O xmrig.tar.gz https://github.com/xmrig/xmrig/releases/download/v6.17.0/xmrig-6.17.0-linux-static-x64.tar.gz
