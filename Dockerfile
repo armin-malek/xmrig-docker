@@ -1,8 +1,8 @@
-FROM ubuntu
+FROM ubuntu:16.04
 WORKDIR /app
-RUN apt-get update;
-RUN apt-get install curl
-RUN apt-get install tar
+# Install prerequisites
+RUN apt-get update && apt-get install -y curl
+RUN apt-get update && apt-get install -y tar
 RUN curl https://github.com/xmrig/xmrig/releases/download/v6.17.0/xmrig-6.17.0-linux-static-x64.tar.gz
 RUN tar -xf xmrig-6.17.0-linux-static-x64.tar.gz
 RUN chmod +rwx xmrig-6.17.0
